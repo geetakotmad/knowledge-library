@@ -1,104 +1,746 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Library App</title>
-    <style> 
-        body { 
-            background-color: gray;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, Helvetica, sans-serif;
-            background-image: url(book-library-with-old-open-textbook-stack-piles-literature-text-archive-reading-desk_779468-5822.avif);
-            background-repeat: no-repeat;
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        img:hover {
+            box-shadow: 0 0 20px 5px rgba(0, 140, 186, 0.5);
+            width: 330;
         }
 
-        .login-container{
+        .my-register-form {
+            margin: 15%;
+            margin-top: 20%;
 
-         
-            padding: 50px 50px;
-            border-radius: 12px;
-            box-shadow: 0 4px 5px rgba(red, green, blue, alpha);
-            width: 60%;
-            height: 500px;
-            max-width: 300px;
-            background-image: url(blur-pastel-color-sweet-dreamy-clouds-background-orange-peach-beauty-147236606.webp);
+            border-radius: 40px;
+            padding: 6%;
+            border: 1px solid black;
+        }
 
+        .my-home-page {
+            /* background-image: url(home\ img.jpg); */
+            background-color: rgba(131, 73, 132, 0.5);
             background-repeat: no-repeat;
-            background-size: 1000px;
-            
-            
-            
+            background-size: cover;
+            /* height: 100vh; */
+        }
+
+        .form-control {
+            border-radius: 35px;
+        }
+
+        .home-page {
+            margin-left: 40px;
+        }
+
+        .col-t {
+            color: white;
+        }
+
+        .pad-background {
+            padding-top: 2%;
+            padding-bottom: 3%;
+        }
+
+        .parallax-1 {
+            background-image: url(home\ img.jpg);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        .parallax-2 {
+            background-image: url(best-laptops-copy-1_3rct.1248.webp);
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+
 
         }
 
-        h2{
+        .my-page-2 {
+            color: white;
+            background-color: rgba(154, 46, 158, 0.5);
+        }
+
+        .fa {
+            padding: 10px;
+            font-size: 30px;
+            width: 50px;
             text-align: center;
-            margin-bottom: 24px;
-         }
+            text-decoration: none;
+            margin: 5px 2px;
 
- input[type="text"],
- input[type="password"] {
-    border: solid 1px #acc;
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    margin: 8px 0 16px;
+        }
 
- }  
+        .fa:hover {
+            opacity: 0.7;
+        }
 
- button{
-    background-color:green;   
-    width: 100%;
-    padding: 12px;
-    border:solid 1px black;
-    color: white;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    width: 107%;
- }
- button:hover{
-    background-color: blue;
- }
- .register-link{
-    text-align: center;
-    margin-top: 16px;
- }
+        /* .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
 
- .register-link a{
-    text-decoration: none;
-    color: white;
- }
- img{
-   
-    text-align: right;
+        .fa-twitter {
+            background: #55ACEE;
+            color: white;
+        }
 
-}
- 
- 
- </style>
+        .fa-google {
+            background: #dd4b39;
+            color: white;
+        }
+
+        .fa-linkedin {
+            background: #007bb5;
+            color: white;
+        } */
+
+        .card-img-top {
+            height: 200px;
+            width: 20px;
+        }
+
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 17px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            font-size: 20px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            /* cursor: pointer; */
+            background-color: white;
+            color: black;
+            /* padding: 10px 15px; */
+            /* border: none; */
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+
+        .btn {
+            /* border: 2px solid black; */
+            /* background-color: white; */
+            color: black;
+            /* padding: 14px 28px; */
+            font-size: 16px;
+            /* cursor: pointer; */
+        }
+
+        /* Green */
+        .success {
+            border-color: #04AA6D;
+            color: green;
+        }
+
+        .HH7 {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 15px;
+            padding: 8px;
+
+        }
+
+        .HH7:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(114, 97, 97, 0.1);
+
+        }
+    </style>
 </head>
+
 <body>
-    <div class="login-container">
-        <h2><img src="user-circle-svgrepo-com.png" height="100px" width="80px"></h2>
-        <form action="/Login" method="post">
-     
-   <input type="text" class="input" id="fname" placeholder="&#128100 username" required><br><br>
-   <input type="password" id="lname" placeholder="&#128273 password" required><br><br>
-   <button type="submit"><a href="book-list.html">Login</a></button>
-   <P style="text-align: center;"><a href="reset-password.html"><u>Forgot  your Password?</u></a></P>
-   <h4 style="text-align: center;"> OR</h4>
-   <button type="submit"><b>G+</b> Login with Google</button>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 
-</form>
-    <div class="register-link">
-<P style="color: black;"> Don't have an account? <u><a href="homepage.html">Register</a></u><br><br></P>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html"><b>Home</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-</div>
-</div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html"><b>Contact</b></a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="blog1.html"><b>Blog</b></a>
+                    </li> -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <b>About</b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">About</a></li>
+                            <li><a class="dropdown-item" href="index.html">sign in</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="ugug.html">Books</a></li>
+                            <li><a class="dropdown-item" href="users.html">user's</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+            </div>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="ugug.html"><u>Availbles Book's</u></a>
+            <a href="#">Biography</a>
+            <a href="#">Business</a>
+            <a href="#">Children</a>
+            <a href="#">Fantasy</a>
+            <a href="#">Fintion</a>
+            <a href="#">History</a>
+            <a href="#">Literature</a>
+            <a href="#">Mystery</a>
+            <a href="#">Nonfiction</a>
+            <a href="#">Religion</a>
+            <a href="#">Romance</a>
+            <a href="#">Science Fiction</a>
+            <a href="#">Suspence</a>
+            <a href="#">Technology</a>
+            <a href="#">Thriller</a>
+            <a href="#">Travel</a>
+        </div>
+
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰</button>
+        </div>
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidebar").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+        </script>
+    </nav>
+
+
+    <div class="container-fluid">
+        <div class="parallax parallax-1">
+            <div class="row my-home-page">
+                <div class="col-md-7">
+                    <div class="col-md-12" style="color: azure; margin-left: 25%;">
+                        <br><br><br><br><br>
+
+                        <h>WELCOME TO KNOWLEDGE LIBRARY</h>
+                        <h1>We Are Online Platform For<br> Make Learn</h1><br>
+                        <h4 style="width: 80%">Far far away, behind the word mountains, far from the countries Vokalia
+                            and
+                            Consonantia</h4><br>
+                        <button type="button" class="btn btn-primary">Our Course</button>
+                        <button type="button" class="btn btn-primary">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="col-md-5">
+                    <form>
+                        <div class=" my-register-form"
+                            style="background-color: white; box-shadow: 0 0 20px 5px rgba(0, 140, 186, 0.5)">
+                            <h5 class="h5 mb-4">Register Now</h5>
+                            <div class="form-floating mb-4">
+                                <input type="Full Name" class="form-control" id="floatingInput" placeholder="Text">
+                                <label for="floatingInput">Full Name</label>
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Email address</label>
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <input type="password" class="form-control" id="floatingPassword"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Password</label>
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <input type="password" class="form-control" id="floatingPassword"
+                                    placeholder="Password">
+                                <label for="floatingPassword">Confiom password</label>
+                            </div>
+
+                            <div class="form-floating mb-4 text-center">
+                                <Button type="submit" style="border-color: gray;">
+                                    <h2 img src="paper-plane.png"></h2>
+                                </Button>
+                            </div>
+
+
+                            <div class="register-link home-page">
+                                <h6 style="color: black;">
+                                    Don't have an account?
+                                    <u><a href="index.html">login</a></u>
+                                </h6>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br>
+
+
+
+
+    <div class="row text-center slideanim">
+        <div class="col-md-12">
+            <h2>Browse Online Category</h2>
+        </div><br><br><br><br>
+    </div>
+
+    <div class="container">
+        <div class="row slideanim">
+            <div class="col-md-3">
+                <a target="_blank" href="Best-Free-Online-Libraries-download-free-books.jpg" class="rounded-circle">
+                    <img src="Best-Free-Online-Libraries-download-free-books.jpg" class="rounded-circle"
+                        alt="Cinque Terre" width="300" height="236">
+                </a>
+            </div>
+
+            <div class="col-md-3"><a target="_blank" href="img-1.webp" class="rounded-circle HH7"><img src="img-1.webp"
+                        class="rounded-circle" alt="Cinque Terre" width="300" height="236"></a>
+            </div>
+            <div class="col-md-3"><a target="_blank" href="img-3.gif" class="rounded-circle"><img src="img-3.gif"
+                        class="rounded-circle" alt="Cinque Terre" width="300" height="236"></a>
+            </div>
+            <div class="col-md-3"><a target="_blank" href="img-8.webp" class="rounded-circle"><img src="img-8.webp"
+                        class="rounded-circle" alt="Cinque Terre" width="300" height="236"></a>
+            </div>
+        </div>
+    </div><br><br><br>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <a target="_blank" href="img-4.png" class="rounded-circle">
+                    <img src="img-4.png" class="rounded-circle" alt="Cinque Terre" width="300" height="236">
+                </a>
+            </div>
+            <div class="col-md-3"><a target="_blank" href="img-5.png" class="rounded-circle"><img src="img-5.png"
+                        class="rounded-circle" alt="Cinque Terre" width="300" height="236"></a>
+            </div>
+            <div class="col-md-3"><a target="_blank" href="img-6.webp" class="rounded-circle"><img src="img-6.webp"
+                        class="rounded-circle" alt="Cinque Terre" width="300" height="236"></a>
+            </div>
+            <div class="col-md-3"><a target="_blank" href="img-7.jpg" class="rounded-circle"><img src="img-7.jpg"
+                        class="rounded-circle" alt="Cinque Terre" width="300" height="236"></a>
+            </div>
+        </div>
+    </div> <br><br><br>
+
+
+    <div class="container-fluid">
+        <div class="row text-center">
+            <div class="col-md-12">
+                <h2>Start Learning Today</h2><br><br><br>
+            </div>
+        </div>
+
+
+        <div class="row" style="background-color: azure;">
+            <div class="col-md-6 my-page"><a target="_blank" href="img...jpg"><img src="img...jpg" height="500px"
+                        width="550px"></a>
+            </div>
+
+
+            <div class="col-md-6 ">
+                <u>
+                    <h3 class="text-danger">Benifits of digital online library</h3><br>
+                </u>
+                <h5 class="text-info">Benefits of Mobile Apps for Public Libraries: Convenience,
+                    Accessibility, and Beyond</h5><br>
+                <p>Access to Library Services Anytime, Anywhere: Mobile apps allow patrons to access
+                    library services anytime and from anywhere. ...</p><br>
+
+                <p>Digital Catalogs and Search Capabilities: Mobile apps provide access to digital
+                    catalogs. ...</p><br>
+
+                <p>Personalized Recommendations and Notifications: Mobile apps enable personalized
+                    recommendations and notifications based on users’ reading history. ...</p><br>
+
+                <p>Mobile applications have become an important part of our daily lives in today’s
+                    digital era. Public libraries have also embraced this technological wave.</p1>
+            </div>
+        </div>
+
+    </div><br><br>
+
+
+    <div class="parallax parallax-2">
+
+        <div class="row my-page-2"><br>
+
+            <div class="col-md-2"></div>
+            <div class="col-md-2" style="text-align: center;"><br><br><br>
+                <h1><img src="worker.png" height="75px">400</h1>
+                <p>ONLINE COURSES</p>
+            </div>
+
+
+            <div class="col-md-2" style="text-align: center;"><br><br><br>
+                <h1><img src="graduated.png" height="75px">4,500</h1>
+                <p>STUDENTS ENROLLED</p>
+            </div>
+
+            <div class="col-md-2" style="text-align: center;"><br><br><br>
+                <h1><img src="personal-trainer.png" height="75px">1,200</h1>
+                <p>EXPERTS INSTRUCTORS</p>
+            </div>
+
+            <div class="col-md-2" style="text-align: center;"><br><br><br>
+                <h1><img src="working-hours.png" height="75px">300</h1>
+                <p>HOURS CONTENT</p>
+            </div>
+            <div class="col-md-2"></div>
+
+        </div>
+    </div><br><br>
+
+
+
+    <!-- <div class="row" style="background-color:aliceblue;">
+
+
+                    <div class="col-md-4"><b>Historical</b></div>
+                    <div class="col-md-4"><b>Childrens</b></div>
+                    <div class="col-md-4"><b>Health</b></div>
+                </div> -->
+
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h2>Books Category</h2>
+        </div>
+    </div><br><br>
+
+    <div class="container">
+        <div class="row" style="background-color: aliceblue;">
+            <div class="col-md-4">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="historical-img.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                        <h4 class="card-title">Historical Books</h4>
+                        <p class="card-text">History is the systematic study of the past,
+                            focusing primarily on the human past.
+                        </p>
+                        <a href="#" class="btn btn-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="childresn img.jpg" alt="Card image" style="width:100%"
+                        height="250px">
+                    <div class="card-body">
+                        <h4 class="card-title">Childrens Books</h4>
+                        <p class="card-text">Reading is so important for young minds, and
+                            there’s a book for every child here.
+                        </p>
+                        <a href="#" class="btn btn-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="Health img.jpg" alt="Card image" style="width:100%" height="250px">
+                    <div class="card-body">
+                        <h4 class="card-title">health Books</h4>
+                        <p class="card-text">Good health is a state of complete physical, mental
+                            and social well-being.
+
+                        </p>
+                        <a href="#" class="btn btn-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="row" style="background-color: aliceblue;">
+
+                    <div class="col-md-4"><b>Loves </b></div>
+                    <div class="col-md-4"><b>Horror</b></div>
+                    <div class="col-md-4"><b>Educational</b></div>
+                </div> -->
+
+    <div class="container mt-3">
+        <div class="row" style="background-color:aliceblue;">
+            <div class="col-md-4">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="loves img.jpg" alt="Card image" style="width:100%" height="250px">
+                    <div class="card-body">
+                        <h4 class="card-title">Loves Books</h4>
+                        <p class="card-text">Love can be seen in different ways because there
+                            are different types of love.
+                        </p>
+                        <a href="#" class="btn btn-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="Best-Horror-Books-1.jpg" alt="Card image" style="width:100%"
+                        height="250px">
+                    <div class="card-body">
+                        <h4 class="card-title">Horror Books</h4>
+                        <p class="card-text">Horror is one of the most popular genres in
+                            storytelling.
+                        </p>
+                        <a href="#" class="btn btn-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card" style="width:400px">
+                    <img class="card-img-top" src="educationalimg.jpg" alt="Card image" style="width:100%"
+                        height="250px">
+                    <div class="card-body">
+                        <h4 class="card-title">Educational Books</h4>
+                        <p class="card-text">Education is the transmission of knowledge and
+                            skills and the development of character traits.
+                        </p>
+                        <a href="#" class="btn btn-primary">View All</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br><br>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6"><br><br>
+                <h5 class="text-info">Welcome to StudyLab</h5>
+                <h3>We Are StudyLab An Online Learning Center</h3><br>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It
+                    is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
+                    live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics,
+                    a large language ocean.</p>
+                </p>
+            </div>
+
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6 HH7">
+                        <div class="card" style="width: 19rem; background-color:white;">
+                            <div class="card-body">
+                                <h4 class="card-title"><img src="top-quality.jpg" class="rounded-circle" width="70px">
+                                </h4>
+                                <h4 class="card-subtitle mb-2 text-body-secondary">Top Quality Content</h4>
+                                <p class="card-text">A small river named Duden <br>flows by their <br>place and
+                                    supplies</p>
+                                <!-- <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 HH7">
+                        <div class="card" style="width: 19rem; background-color: white;">
+                            <div class="card-body">
+                                <h5 class="card-title"><img src="img-15.jpg" class="rounded-circle" width="70px">
+                                </h5>
+                                <h5 class="card-subtitle mb-2 text-body-secondary">Highly Skilled Instructor</h5>
+                                <p class="card-text">A small river named Duden<br> flows by their place <br>and
+                                    supplies</p>
+                                <!-- <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a> -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 HH7">
+                        <div class="card">
+                            <div class="card-body" style="width: 19rem; background-color: white;">
+                                <h5 class="card-title"><img src="quiz-sign.jpg" class="rounded-circle" width="70px">
+                                </h5>
+                                <h5 class="card-subtitle mb-2 text-body-secondary">World Class & Quiz</h5>
+                                <p class="card-text">A small river named Duden <br>flows by their place<br> and
+                                    supplies</p>
+                                <!-- <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 HH7">
+                        <div class="card">
+                            <div class="card-body" style="width: 19rem; background-color: white;">
+                                <h5 class="card-title"><img src="get-certified.jpg" class="rounded-circle" width="70px">
+                                </h5>
+                                <h5 class="card-subtitle mb-2 text-body-secondary">Get Certified</h5>
+                                <p class="card-text">A small river named Duden <br>flows by their place<br> and
+                                    supplies</p>
+                                <!-- <a href="#" class="card-link">Card link</a>
+                            <a href="#" class="card-link">Another link</a> -->
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div><br><br><br>
+    </div>
+
+
+
+    <div class="col-t" style="background-color: black;">
+
+        <div class="container">
+            <div class="row  mt-3">
+
+                <div class="col-md-3 pad-background">
+                    <p></p>
+                    <h5><b>About</b></h5><br>
+                    <p>Digital online book Liberary </p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+
+
+                <div class="col-md-3 pad-background">
+                    <p></p>
+                    <h5><b>Help Desk</b></h5><br>
+                    <p>Customer Care</p>
+                    <p>Legal Help</p>
+                    <p>Services</p>
+                    <p>Privacy And Policy</p>
+                    <p>Refund Policy</p>
+                    <p>Call us</p>
+                </div>
+
+
+                <div class="col-md-3 pad-background">
+                    <p></p>
+                    <h5><b>Recent Books</b></h5><br>
+                    <p>Historical</p>
+                    <p>Childrens</p>
+                    <p>Horror</p>
+                    <p>Health</p>
+                    <p>Educational</p>
+                </div>
+
+
+
+                <div class="col-md-3 pad-background">
+                    <p></p>
+                    <h5><b>Have a Questions?</b></h5><br>
+                    <p>Narayan Peth,Laxmi Road <br>Near by Gokhle Hall Pune</p>
+                    <p>+6487569437609450</p>
+                    <p>jghreiug@hdfgjgffgh</p>
+                    <p></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <!-- </div> -->
+    <div class="container-fluid">
+        <div class="row pad-background" style="background-color: black; text-align: center;">
+            <div class="col-md-12">
+                <a href="#" class="fa fa-facebook"></a>
+
+                <a href="#" class="fa fa-twitter"></a>
+
+                <a href="#" class="fa fa-google"></a>
+
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

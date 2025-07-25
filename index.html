@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library App</title>
+    <style> 
+        body { 
+            background-color: gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(book-library-with-old-open-textbook-stack-piles-literature-text-archive-reading-desk_779468-5822.avif);
+            background-repeat: no-repeat;
+        }
+
+        .login-container{
+
+         
+            padding: 50px 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 5px rgba(red, green, blue, alpha);
+            width: 60%;
+            height: 500px;
+            max-width: 300px;
+            background-image: url(blur-pastel-color-sweet-dreamy-clouds-background-orange-peach-beauty-147236606.webp);
+
+            background-repeat: no-repeat;
+            background-size: 1000px;
+            
+            
+            
+
+        }
+
+        h2{
+            text-align: center;
+            margin-bottom: 24px;
+         }
+
+ input[type="text"],
+ input[type="password"] {
+    border: solid 1px #acc;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 8px 0 16px;
+
+ }  
+
+ button{
+    background-color:green;   
+    width: 100%;
+    padding: 12px;
+    border:solid 1px black;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 107%;
+ }
+ button:hover{
+    background-color: blue;
+ }
+ .register-link{
+    text-align: center;
+    margin-top: 16px;
+ }
+
+ .register-link a{
+    text-decoration: none;
+    color: white;
+ }
+ img{
+   
+    text-align: right;
+
+}
+ 
+ 
+ </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2><img src="user-circle-svgrepo-com.png" height="100px" width="80px"></h2>
+        <form action="/Login" method="post">
+     
+   <input type="text" class="input" id="fname" placeholder="&#128100 username" required><br><br>
+   <input type="password" id="lname" placeholder="&#128273 password" required><br><br>
+   <button type="submit"><a href="book-list.html">Login</a></button>
+   <P style="text-align: center;"><a href="reset-password.html"><u>Forgot  your Password?</u></a></P>
+   <h4 style="text-align: center;"> OR</h4>
+   <button type="submit"><b>G+</b> Login with Google</button>
+
+</form>
+    <div class="register-link">
+<P style="color: black;"> Don't have an account? <u><a href="homepage.html">Register</a></u><br><br></P>
+
+</div>
+</div>
+</body>
+</html>

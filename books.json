@@ -1,0 +1,177 @@
+[
+  {
+    "title": "The Republic",
+    "author": "Plato",
+    "publication": "c. 380 BC",
+    "description": "Foundational work of Western political philosophy exploring justice, order, and the ideal state.",
+    "link": "https://en.wikipedia.org/wiki/The_Republic_(Plato)"
+  },
+  {
+    "title": "A Theory of Justice",
+    "author": "John Rawls",
+    "publication": "1971",
+    "description": "Landmark in modern political philosophy introducing the veil of ignorance and principles of justice.",
+    "link": "https://en.wikipedia.org/wiki/A_Theory_of_Justice" 
+  },
+  {
+    "title": "How to Win Friends and Influence People",
+    "author": "Dale Carnegie",
+    "publication": "1936",
+    "description": "Classic self‑help guide on relationship building and interpersonal skills.",
+    "link": "https://en.wikipedia.org/wiki/How_to_Win_Friends_and_Influence_People"
+  },
+  {
+    "title": "The 7 Habits of Highly Effective People",
+    "author": "Stephen R. Covey",
+    "publication": "1989",
+    "description": "Framework for personal and professional effectiveness built around seven core habits.",
+    "link": "https://en.wikipedia.org/wiki/The_7_Habits_of_Highly_Effective_People"
+  },
+  {
+    "title": "Guns, Germs, and Steel",
+    "author": "Jared Diamond",
+    "publication": "1997",
+    "description": "Explores how environment and geography shaped the fates of human societies.",
+    "link": "https://en.wikipedia.org/wiki/Guns,_Germs,_and_Steel"
+  },
+  {
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "publication": "1980",
+    "description": "A broad, poetic introduction to science and humanity’s place in the universe.",
+    "link": "https://en.wikipedia.org/wiki/Cosmos_(Sagan_book)" 
+  },
+  {
+    "title": "The Fifth Discipline",
+    "author": "Peter Senge",
+    "publication": "1990",
+    "description": "Introduces systems thinking and learning organizations.",
+    "link": "https://en.wikipedia.org/wiki/The_Fifth_Discipline" 
+  },
+  {
+    "title": "Principia Mathematica",
+    "author": "Isaac Newton",
+    "publication": "1687",
+    "description": "Groundbreaking work establishing the laws of motion and universal gravitation.",
+    "link": "https://en.wikipedia.org/wiki/Philosophi%C3%A6_Naturalis_Principia_Mathematica" 
+  },
+  {
+    "title": "The Little Prince",
+    "author": "Antoine de Saint‑Exupéry",
+    "publication": "1943",
+    "description": "A poetic tale of innocence, friendship, and the absurdities of adulthood.",
+    "link": "https://en.wikipedia.org/wiki/The_Little_Prince"
+  },
+  {
+    "title": "1984",
+    "author": "George Orwell",
+    "publication": "1949",
+    "description": "Dystopian critique of totalitarianism, surveillance, and manipulation.",
+    "link": "https://en.wikipedia.org/wiki/Nineteen_Eighty‑Four"
+  },
+  {
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "publication": "1960",
+    "description": "Powerful exploration of racism, justice, and moral growth in the American South.",
+    "link": "https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird" 
+  },
+  {
+    "title": "The Handmaid’s Tale",
+    "author": "Margaret Atwood",
+    "publication": "1985",
+    "description": "Feminist dystopia about a theocratic regime and the subjugation of women.",
+    "link": "https://en.wikipedia.org/wiki/The_Handmaid%27s_Tale" 
+  },
+  {
+    "title": "Beloved",
+    "author": "Toni Morrison",
+    "publication": "1987",
+    "description": "Haunting novel about slavery’s legacy and maternal love.",
+    "link": "https://en.wikipedia.org/wiki/Beloved_(novel)" 
+  },
+  {
+    "title": "Anna Karenina",
+    "author": "Leo Tolstoy",
+    "publication": "1877",
+    "description": "Epic examination of love, adultery, and Russian society.",
+    "link": "https://en.wikipedia.org/wiki/Anna_Karenina"
+  },
+  {
+    "title": "The Grapes of Wrath",
+    "author": "John Steinbeck",
+    "publication": "1939",
+    "description": "Portrait of dust bowl migrants and the human cost of economic hardship.",
+    "link": "https://en.wikipedia.org/wiki/The_Grapes_of_Wrath"
+  },
+  {
+    "title": "Meditations",
+    "author": "Marcus Aurelius",
+    "publication": "c. 170 AD",
+    "description": "Stoic reflections on duty, virtue, and the inner life of a Roman emperor.",
+    "link": "https://en.wikipedia.org/wiki/Meditations_(Aurelius)" 
+  },
+  {
+    "title": "The Diving‑Bell and the Butterfly",
+    "author": "Jean‑Dominique Bauby",
+    "publication": "1997",
+    "description": "Memoir written by a man paralyzed except for his left eyelid—stunning portrait of inner life.",
+    "link": "https://en.wikipedia.org/wiki/The_Diving‑Bell_and_the_Butterfly" 
+  },
+  {
+    "title": "The Obstacle Is the Way",
+    "author": "Ryan Holiday",
+    "publication": "2014",
+    "description": "Modern take on Stoicism—turn obstacles into opportunities.",
+    "link": "https://en.wikipedia.org/wiki/The_Obstacle_Is_the_Way" 
+  },
+  {
+    "title": "Super Thinking",
+    "author": "Gabriel Weinberg & Lauren McCann",
+    "publication": "2019",
+    "description": "Mental models from various disciplines to improve decision‑making.",
+    "link": "https://en.wikipedia.org/wiki/Super_Thinking"
+  },
+  {
+    "title": "Range: Why Generalists Triumph in a Specialized World",
+    "author": "David Epstein",
+    "publication": "2019",
+    "description": "Argues for breadth of experience and diverse learning paths.",
+    "link": "https://en.wikipedia.org/wiki/Range:_Why_Generalists_Triumph_in_a_Specialized_World" 
+  },
+  {
+    "title": "The Tiger That Isn’t",
+    "author": "Michael Blastland & Andrew Dilnot",
+    "publication": "2007",
+    "description": "Guide to critical thinking and interpreting statistics in everyday life.",
+    "link": "https://en.wikipedia.org/wiki/The_Tiger_That_Isn%27t" 
+  },
+  {
+    "title": "Discipline and Punish",
+    "author": "Michel Foucault",
+    "publication": "1975",
+    "description": "History of modern social control and the carceral system.",
+    "link": "https://en.wikipedia.org/wiki/Discipline_and_Punish"
+  },
+  {
+    "title": "Lean In",
+    "author": "Sheryl Sandberg",
+    "publication": "2013",
+    "description": "Explores women’s leadership, workplace challenges, and gender equality.",
+    "link": "https://en.wikipedia.org/wiki/Lean_In"
+  },
+  {
+    "title": "The Rule of Law",
+    "author": "Tom Bingham",
+    "publication": "2010",
+    "description": "Accessible essay on importance of the rule of law in democratic societies.",
+    "link": "https://en.wikipedia.org/wiki/The_Rule_of_Law_(book)" 
+  },
+  {
+    "title": "The Anxious Generation",
+    "author": "Jonathan Haidt",
+    "publication": "2024",
+    "description": "Explores modern childhood mental health and social media’s impact.",
+    "link": "https://en.wikipedia.org/wiki/The_Anxious_Generation" 
+  }
+]
